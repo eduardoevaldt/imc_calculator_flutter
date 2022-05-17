@@ -286,4 +286,3 @@ class _BmiCalculatorState extends State<BmiCalculator> {
     );
   }
 }
-// MINUTO 7:09
