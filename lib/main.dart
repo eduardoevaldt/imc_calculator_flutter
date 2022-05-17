@@ -37,7 +37,7 @@ class _BmiCalculatorState extends State<BmiCalculator> {
   TextEditingController heightController = TextEditingController(text: "175");
   TextEditingController weightController = TextEditingController(text: "80");
 
-  var bmiStats;
+  var bmiStats = "-";
 
   void onCalculateAgain() {
     setState(() {
@@ -74,7 +74,10 @@ class _BmiCalculatorState extends State<BmiCalculator> {
       appBar: AppBar(
         title: Text(
           "BMI Calculator",
-          style: TextStyle(color: Colors.black),
+          style: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+          ),
         ),
         elevation: 0.0,
         backgroundColor: Colors.white,
@@ -84,7 +87,7 @@ class _BmiCalculatorState extends State<BmiCalculator> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(12.0),
+          padding: const EdgeInsets.all(13.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -187,13 +190,13 @@ class _BmiCalculatorState extends State<BmiCalculator> {
                 padding: const EdgeInsets.all(25.0),
                 child: Center(
                   child: SizedBox(
-                    width: 300,
+                    width: 290,
                     child: ElevatedButton(
                       onPressed: () {
                         onCalculateBmi();
                       },
                       style: ElevatedButton.styleFrom(
-                        padding: const EdgeInsets.all(25),
+                        padding: const EdgeInsets.all(22),
                       ),
                       child: const Text(
                         "Calculate your BMI",
